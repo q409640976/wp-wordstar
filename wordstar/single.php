@@ -63,24 +63,10 @@
     }
     ?>
         <div class="clear"></div>
-        <div class="author-info byline author p-author vcard hcard h-card author-<?php echo esc_attr(get_the_author_meta('ID'));?>" itemprop="author " itemscope itemtype="http://schema.org/Person">
-            <div class="author-avatar">
-                <?php echo get_avatar(get_the_author_meta('user_email'), apply_filters('wordstar_author_bio_avatar_size', 70));?>
-            </div>
-            <div class="author-description">
-                <h3 class="author-title"><a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID')));?>" title="<?php echo esc_attr('Posts by', 'wordstar');?> <?php  echo esc_html(get_the_author_meta('display_name'));?>" rel="author" class="url u-url " itemprop="url"> <span class="fn p-name" itemprop="name">
-                            <?php  echo esc_html(get_the_author_meta('display_name'));?>
-                        </span> </a></h3>
-                <?php if($desc=get_the_author_meta('description')){
-                  echo '<div class="author-bio">'.esc_html($desc).'</div>';
-                  }?>
-                <?php wordstar_author_metas(get_the_author_meta('ID')); ?>
-            </div>
-            <div class="clear"></div>
-        </div>
+
     </article>
     <?php endwhile; ?>
-    <?php if (comments_open() || get_comments_number() ) {comments_template();}?>
+    <?php //if (comments_open() || get_comments_number() ) {comments_template();}?>
 </main>
 <?php get_sidebar();?>
 <?php get_footer(); ?>

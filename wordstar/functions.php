@@ -11,4 +11,6 @@
 require get_template_directory() . '/inc/funtions.php';
 require get_template_directory() . '/inc/actions.php';
 require get_template_directory() . '/inc/filters.php';
+add_filter( 'pre_option_link_manager_enabled', '__return_true' );
+show_admin_bar(false);
 ?>
